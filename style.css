@@ -1,0 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    width: 400px;
+    height: 600px;
+    margin-top: 50px;
+    border-radius: 20px;
+    font-size: 1.6em;
+}
+
+h2{
+    background-color: aqua;
+    width: 300px;
+}
+
+label{
+    background-color: blueviolet;
+}
+
+.children{
+    margin-top: 40px;
+}
