@@ -1,14 +1,22 @@
 // Generates a random number between 0 and 100 (including 0 and 100).
-function randomNum(){
-    num = Math.floor(Math.random() * 100);
-    return num
-}
+let num = Math.floor(Math.random() * 100);
+console.log(num);
 
-console.log(randomNum());
+// Variables declared for use in function below
+let myBtn = document.getElementById("btn")
+let guess;
 
-// Gets the users input.
-document.getElementById("btn").onclick = function(){
+// Generates a message based on the users input as to how close they are to the number.
+myBtn.onclick = function(){
     guess = document.getElementById("inpt").value;
-    console.log(guess);
+    if (guess < num){
+        document.getElementById("message").textContent = ("Your guess is too low, try again!")
+    }
+    else if (guess > num){
+        document.getElementById("message").textContent = ("Your guess is too high, try again!")
+    }
+    else{
+        document.getElementById("message").textContent = ("Well done you guessed right!")
+    }
 }
 
